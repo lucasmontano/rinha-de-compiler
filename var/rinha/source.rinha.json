@@ -1,0 +1,163 @@
+{
+    "name": "fibonacci.rinha",
+    "expression": {
+      "kind": "Let",
+      "name": {
+        "text": "fib",
+        "location": {
+          "start": 4,
+          "end": 7
+        }
+      },
+      "value": {
+        "kind": "Function",
+        "parameters": [
+          {
+            "text": "n",
+            "location": {
+              "start": 14,
+              "end": 15
+            }
+          }
+        ],
+        "value": {
+          "kind": "If",
+          "condition": {
+            "kind": "Binary",
+            "lhs": {
+              "kind": "Var",
+              "text": "n",
+              "location": {
+                "start": 28,
+                "end": 29
+              }
+            },
+            "op": "Lt",
+            "rhs": {
+              "kind": "Int",
+              "value": 2,
+              "location": {
+                "start": 32,
+                "end": 33
+              }
+            }
+          },
+          "then": {
+            "kind": "Var",
+            "text": "n",
+            "location": {
+              "start": 41,
+              "end": 42
+            }
+          },
+          "otherwise": {
+            "kind": "Binary",
+            "lhs": {
+              "kind": "Call",
+              "callee": {
+                "kind": "Var",
+                "text": "fib",
+                "location": {
+                  "start": 58,
+                  "end": 61
+                }
+              },
+              "arguments": [
+                {
+                  "kind": "Binary",
+                  "lhs": {
+                    "kind": "Var",
+                    "text": "n",
+                    "location": {
+                      "start": 62,
+                      "end": 63
+                    }
+                  },
+                  "op": "Sub",
+                  "rhs": {
+                    "kind": "Int",
+                    "value": 1,
+                    "location": {
+                      "start": 66,
+                      "end": 67
+                    }
+                  }
+                }
+              ]
+            },
+            "op": "Add",
+            "rhs": {
+              "kind": "Call",
+              "callee": {
+                "kind": "Var",
+                "text": "fib",
+                "location": {
+                  "start": 71,
+                  "end": 74
+                }
+              },
+              "arguments": [
+                {
+                  "kind": "Binary",
+                  "lhs": {
+                    "kind": "Var",
+                    "text": "n",
+                    "location": {
+                      "start": 75,
+                      "end": 76
+                    }
+                  },
+                  "op": "Sub",
+                  "rhs": {
+                    "kind": "Int",
+                    "value": 2,
+                    "location": {
+                      "start": 79,
+                      "end": 80
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      },
+      "next": {
+        "kind": "Print",
+        "value": {
+          "kind": "Binary",
+          "lhs": {
+            "kind": "Str",
+            "value": "fib: ",
+            "location": {
+              "start": 93,
+              "end": 99
+            }
+          },
+          "op": "Add",
+          "rhs": {
+            "kind": "Call",
+            "callee": {
+              "kind": "Var",
+              "text": "fib",
+              "location": {
+                "start": 103,
+                "end": 106
+              }
+            },
+            "arguments": [
+              {
+                "kind": "Int",
+                "value": 100000,
+                "location": {
+                  "start": 107,
+                  "end": 113
+                }
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+  
