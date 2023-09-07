@@ -14,5 +14,5 @@ function executeRinhaCode(filePath, initialEnvironment = {}) {
     }
 }
 
-const filePath = './var/rinha/source.hello.json';
-executeRinhaCode(filePath, {});
+// executeRinhaCode('./var/rinha/source.hello.json', {});
+executeRinhaCode('./var/rinha/source.rinha.json', {});
