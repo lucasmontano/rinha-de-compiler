@@ -8,6 +8,15 @@ JavaScript interpret para a [Rinha de Compiler](https://github.com/aripiprazole/
 git clone git@github.com:lucasmontano/rinha-de-compiler.git
 ```
 
+### With Docker
+
+```
+docker build -t rinha .
+docker run rinha
+```
+
+### Without Docker
+
 **MacOS**
 ```
 brew install node
