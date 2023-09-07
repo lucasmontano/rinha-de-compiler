@@ -1,5 +1,4 @@
-
-function interpret(node, environment, memo = {}) {    
+function interpret(node, environment) {
     switch (node.kind) {
         case 'Call':
             // Fibonacci Ninja Interpret            
