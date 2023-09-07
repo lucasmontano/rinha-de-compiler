@@ -4,33 +4,15 @@ JavaScript interpret para a [Rinha de Compiler](https://github.com/aripiprazole/
 ## TODO 
 Basicamente implementar tudo que tem na [especificação da arvore sintática abstrata](https://github.com/aripiprazole/rinha-de-compiler/blob/main/SPECS.md).
 
-## Como Rodar
-Meu interpretador consegue interpretar algo como abaixo:
+## Use Case que esse Interpretador consegue fazer:
 
+### Simples Hello World
 ```
 print ("Lucas Montano says hello, world")
 ```
 
-Tendo um JSON do AST conforme abaixo:
-```
-{
-  "name": "hello.rinha",
-  "expression": {
-    "kind": "Print",
-    "value": {
-      "kind": "Str",
-      "value": "Lucas Montano says hello, world",
-      "location": {
-        "start": 8,
-        "end": 40,
-        "filename": "hello.rinha"
-      }
-    },
-    "location": {
-      "start": 0,
-      "end": 41,
-      "filename": "hello.rinha"
-    }
-  }
-}
-```
+### Fibonacci Ninja :)
+
+A pegadinha pode estar em algoritmos como Fibonacci que pode ser fornecido como recursão. Se tu não viu ainda recomendo ver esse meu [video aqui](https://youtu.be/XfmZRS6oP3U?si=4iAyLD2SCFBRB9d0).
+
+Meu interpretador sabe fazer 2 coisas apenas, Hello World e Fibonacci lol
