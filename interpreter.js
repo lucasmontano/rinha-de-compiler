@@ -69,6 +69,8 @@ function interpret(node, environment) {
                     console.log(term);
                     return term;            
             }
+        case 'Var':
+            return environment[node.text];
         default:
             return console.error(`Unknown node kind: ${node.kind}`);
     }
