@@ -1,4 +1,3 @@
-
 const fs = require('fs');
 const interpret = require('./interpreter');
 
@@ -14,5 +13,5 @@ function executeRinhaCode(filePath, initialEnvironment = {}) {
     }
 }
 
-// executeRinhaCode('./var/rinha/source.hello.json', {});
-executeRinhaCode('./var/rinha/source.rinha.json', {});
+// executeRinhaCode('/var/rinha/source.hello.json', {});
+executeRinhaCode('/var/rinha/source.rinha.json', {});
