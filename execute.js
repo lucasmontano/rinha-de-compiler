@@ -13,5 +13,8 @@ function executeRinhaCode(filePath, initialEnvironment = {}) {
     }
 }
 
-// executeRinhaCode('/var/rinha/source.hello.json', {});
-executeRinhaCode('/var/rinha/source.rinha.json', {});
+const start = process.hrtime();
+executeRinhaCode('./var/rinha/source.rinha.json', {});
+const diff = process.hrtime(start);
+const timeInSeconds = diff[0] + diff[1] / 1e9;
+console.log(`Interpreter Exec. Time: ${timeInSeconds} segundos`);
