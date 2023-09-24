@@ -121,6 +121,28 @@ function interpret(node, environment) {
             } else {
                 return interpret(node.otherwise, environment);
             }
+        case 'File':
+            return interpret(node.expression, environment);
+        case 'Bool':
+            return node.value;
+        case 'Tuple':
+            const first = interpret(node.first, environment);
+            const second = interpret(node.second, environment);
+            return [first, second];
+        case 'First':
+            const tupleForFirst = interpret(node.value, environment);
+            if (Array.isArray(tupleForFirst) && tupleForFirst.length == 2) {
+                return tupleForFirst[0];   
+            } else {
+                return console.error('Expected a tuple for first operation');
+            }
+        case 'Second':
+            const tupleForSecond = interpret(node.value, environment);
+            if (Array.isArray(tupleForSecond) && tupleForSecond.length == 2) {
+                return tupleForSecond[1];   
+            } else {
+                return console.error('Expected a tuple for second operation');
+            }
         default:
             return console.error(`Unknown node kind: ${node.kind}`);
     }
