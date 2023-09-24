@@ -12,7 +12,8 @@ git clone git@github.com:lucasmontano/rinha-de-compiler.git
 
 ```
 docker build -t rinha .
-docker run rinha
+
+docker run --mount type=bind,source=/var/rinha/source.rinha.json,target=/var/rinha/source.rinha.json --memory=2gb --cpus=2 rinha
 ```
 
 ### Without Docker
