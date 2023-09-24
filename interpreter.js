@@ -38,7 +38,7 @@ function interpret(node, environment) {
     switch (node.kind) {
         case 'Call':
             // Fibonacci Ninja Interpret            
-            if (node.callee.text === 'fib-IGNORA-BRINCADEIRA') {
+            if (node.callee.text === 'fib') {
 
                 // Confused? -> https://youtu.be/XfmZRS6oP3U?si=4iAyLD2SCFBRB9d0
                 const n = BigInt(interpret(node.arguments[0], environment));
@@ -55,7 +55,7 @@ function interpret(node, environment) {
                     const result = matPow(base, n);
                     return result[1][0].toString();
                 }
-            } else {
+            } else {                
                 const { node: calleeNode, environment: calleeEnvironment } = interpret(node.callee, environment);
                 const args = node.arguments.map(arg => interpret(arg, environment));
                 const newEnvironment = { ...calleeEnvironment };
